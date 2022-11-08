@@ -79,9 +79,11 @@ $(document).on('click','#destAdd',function(e){
               // $('#destContent').html(dest); 
               console.log(JSON.stringify(dest));
       localStorage.setItem("row",JSON.stringify(dest));
+              var inclu = JSON.parse(dest["destInclu"]);
+            
+            	getInclusions(inclu);
               $('#myNavLabel').html(dest["destName"]);
               $('#ifrmYT').attr('src',dest["destTrailer"]);
-              $("#destInclu").html(dest["destInclu"]);
               $("#destPrice").html("Price: "+dest["destPrice"]);
               $("#destDesc").html(dest["destDesc"]);
               $("#bookNow").attr('value', dest["destID"]);
@@ -111,5 +113,34 @@ $("#bookForm [name='nums']").keyup(function(){
   $("#bookForm [name='price']").val(price*num);
 });
 
+
+function getInclusions(inclu){
+    
+  console.log(inclu);
+  console.log($('#inclusions1').val());
+  if(inclu[0] == "O1"){
+    $("#destInclu").html("Roundtrip Airfare via Philippines Airline");
+  }else if(inclu[0] == "O2"){
+    $("#destInclu").html("One-way Trip Airfare via Philippines Airline");
+  }
+  
+  if(inclu[1] == "O3"){
+    $("#destInclu1").html("1 night accomodation");
+  }else if(inclu[1] == "O4"){
+    $("#destInclu1").html("2 nights accomodation");
+  }
+
+  if(inclu[2] == "O5"){
+    $("#destInclu2").html("Daily Breakfast, Dinner");
+  }else if(inclu[2] == "O6"){
+    $("#destInclu2").html("Daily Breakfast,Lunch,Dinner");
+  }
+  
+  if(inclu[3] == "O7"){
+    $("#destInclu3").html("Tour guide and transportation");
+  }else if(inclu[3] == "O8"){
+    $("#destInclu3").html("First day hotel pickup and guide");
+  }
+}
 
 });

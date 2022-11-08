@@ -236,10 +236,10 @@ include("./modal.php");
                             <img src="./assets/img/team-1.jpg" alt="Team">
                             <div class="social">
                                 <ul>
-                                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-github-original"></i></a></li>
+                                    <li><a target="_blank" href="https://web.facebook.com/mizzenggg"><i class="lni-facebook-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/mizzengg"><i class="lni-twitter-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/mizzyssippi/"><i class="lni-instagram-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://github.com/Mizzeyy"><i class="lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -255,10 +255,10 @@ include("./modal.php");
                             <img src="./assets/img/team-2.jpg" alt="Team">
                             <div class="social">
                                 <ul>
-                                    <li><a href="https://facebook.com/fascinatingact"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a href="https://twitter.com/fascinatinggg_"><i class="lni-twitter-filled"></i></a></li>
-                                    <li><a href="https://www.instagram.com/terribityu/"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="https://github.com/terribityu"><i class="lni-github-original"></i></a></li>
+                                    <li><a target="_blank" href="https://facebook.com/fascinatingact"><i class="lni-facebook-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/fascinatinggg_"><i class="lni-twitter-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/terribityu/"><i class="lni-instagram-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://github.com/terribityu"><i class="lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -274,10 +274,10 @@ include("./modal.php");
                             <img src="./assets/img/team-3.jpg" alt="Team">
                             <div class="social">
                                 <ul>
-                                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-github-original"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="lni-facebook-filled"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="lni-twitter-filled"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="lni-instagram-filled"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>

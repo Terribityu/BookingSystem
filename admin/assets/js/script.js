@@ -86,41 +86,33 @@ $(document).ready(function(){
 		console.log($('#inclusions1').val());
 		if(inclu[0] == "O1"){
 			$('#inclusions1').prop('checked',true);
-			$("#destInclu").html("Roundtrip Airfare via Philippines Airline");
 			$('#inclusions2').attr("disabled", true);
 		}else if(inclu[0] == "O2"){
 			$('#inclusions2').prop('checked',true);
-			$("#destInclu").html("One-way Trip Airfare via Philippines Airline");
 			$('#inclusions1').attr("disabled", true);
 		}
 		
 		if(inclu[1] == "O3"){
 			$('#inclusions3').prop('checked',true);
-			$("#destInclu1").html("1 night accomodation");
 			$('#inclusions4').attr("disabled", true);
 		}else if(inclu[1] == "O4"){
 			$('#inclusions4').prop('checked',true);
-			$("#destInclu1").html("2 nights accomodation");
 			$('#inclusions3').attr("disabled", true);
 		}
 	
 		if(inclu[2] == "O5"){
 			$('#inclusions5').prop('checked',true);
-			$("#destInclu2").html("Daily Breakfast, Dinner");
 			$('#inclusions6').attr("disabled", true);
 		}else if(inclu[2] == "O6"){
 			$('#inclusions6').prop('checked',true);
-			$("#destInclu2").html("Daily Breakfast,Lunch,Dinner");
 			$('#inclusions5').attr("disabled", true);
 		}
 		
 		if(inclu[3] == "O7"){
 			$('#inclusions7').prop('checked',true);
-			$("#destInclu3").html("Tour guide and transportation");
 			$('#inclusions8').attr("disabled", true);
 		}else if(inclu[3] == "O8"){
 			$('#inclusions8').prop('checked',true);
-			$("#destInclu3").html("First day hotel pickup and guide");
 			$('#inclusions7').attr("disabled", true);
 		}
 	}

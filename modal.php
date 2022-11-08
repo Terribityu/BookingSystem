@@ -13,7 +13,7 @@
                       <div class="col-lg-1">
                             <p> Inclusions: </p>
                       </div>
-                      <div class="col-lg-4 ml-4">
+                      <div class="col-lg-6 ml-4">
                         <ul>
                         <li>
                             <span id="destInclu"> Kalapati </span>
