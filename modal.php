@@ -1,24 +1,3 @@
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header ftco-degree-bg">
-		    <button type="button" class="close d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close">
-		      <span aria-hidden="true" class="ion-ios-close"></span>
-	        </button>
-	      </div>
-		    <div class="modal-body1 pt-md-0 pb-md-5 text-center">
-		  	<h2>You've Got Mail!</h2>
-	      	<div class="icon d-flex align-items-center justify-content-center">
-	      		<img src="./assets/img/email.svg" alt="" class="img-fluid">
-		    </div>
-		  	<h4 class="mb-2">We sent confirmation link to:</h4>
-	      	<h3>johndoe<span>@</span>gmail.com</h3>
-
-		    </div>
-		</div>
-	  </div>
-	</div>
   
 <div class="modal fade" id="myNav" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="myNavLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg ">
@@ -103,6 +82,41 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" name="bnt_book">Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="contactModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="bookLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookLabel"><i id="icon" class="lni-envelope"></i> Contact Us</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="bookBody">
+            <form id = "contactform">
+              <!-- Name input -->
+              <div class="form-outline mb-4">
+                  <input type="text" id="form4Example1" name="name" class="form-control" required placeholder = "Name"/>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                  <input type="email" id="form4Example2" name="email" class="form-control" required placeholder = "Email"/>
+              </div>
+
+              <!-- Message input -->
+              <div class="form-outline mb-2">
+                  <textarea class="form-control" id="form4Example3" name="message" rows="4" required placeholder = "Message"></textarea>
+              </div>
+
+              <input type="hidden" id="btncontact" name="btncontact" value="new"/>
+              
+            </div>
+            <div class="modal-footer"><!-- Submit button -->
+              <input type="submit" class="btn btn-primary btn-block" value="Send"></input>
                 </form>
             </div>
         </div>

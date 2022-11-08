@@ -233,13 +233,13 @@ include("./modal.php");
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="team-image">
-                            <img src="./assets/img/team-1.png" alt="Team">
+                            <img src="./assets/img/team-1.jpg" alt="Team">
                             <div class="social">
                                 <ul>
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
                                     <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
                                     <li><a href="#"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                                    <li><a href="#"><i class="lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -252,13 +252,13 @@ include("./modal.php");
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="team-image">
-                            <img src="./assets/img/team-2.png" alt="Team">
+                            <img src="./assets/img/team-2.jpg" alt="Team">
                             <div class="social">
                                 <ul>
-                                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                                    <li><a href="https://facebook.com/fascinatingact"><i class="lni-facebook-filled"></i></a></li>
+                                    <li><a href="https://twitter.com/fascinatinggg_"><i class="lni-twitter-filled"></i></a></li>
+                                    <li><a href="https://www.instagram.com/terribityu/"><i class="lni-instagram-filled"></i></a></li>
+                                    <li><a href="https://github.com/terribityu"><i class="lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -271,13 +271,13 @@ include("./modal.php");
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="team-image">
-                            <img src="./assets/img/team-3.png" alt="Team">
+                            <img src="./assets/img/team-3.jpg" alt="Team">
                             <div class="social">
                                 <ul>
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
                                     <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
                                     <li><a href="#"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                                    <li><a href="#"><i class="lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -367,34 +367,34 @@ include("./modal.php");
 
           <div class="cta d-block d-md-flex align-items-center px-5">
             <div>
-              <h2 class="mb-0">Ready for a next project?</h2>
+              <h2 class="mb-0">Ready, Set, Gala!</h2>
               <h3 class="text-dark">Let's get started!</h3>
             </div>
             <div class="ml-auto">
-              <a href="#" id="cntactbtn" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+              <a href="#" id="cntactbtn" data-bs-toggle="modal" data-bs-target="#contactModal" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
             </div>
           </div>
           <div class="row">
 
             <div class="col-sm">
-              <a href="#" class="footer-logo">Colorlib</a>
+              <a href="#" class="footer-logo">Ready, Set, Gala!</a>
               <p class="copyright">
-                <small>&copy; 2019</small>
+                <small>&copy; 2022</small>
               </p>
             </div>
-            <div class="col-sm">
+            <!-- <div class="col-sm">
               <h3>Customers</h3>
               <ul class="list-unstyled links">
                 <li><a href="#">Buyer</a></li>
                 <li><a href="#">Supplier</a></li>
               </ul>
-            </div>
+            </div> -->
             <div class="col-sm">
               <h3>Company</h3>
               <ul class="list-unstyled links">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#about">About us</a></li>
+                <!-- <li><a href="#">Careers</a></li> -->
+                <li><a href="#contactus">Contact us</a></li>
               </ul>
             </div>
             <div class="col-sm">
@@ -411,7 +411,7 @@ include("./modal.php");
                 <li><a href="#"><span class="lni-twitter-filled"></span></a></li>
                 <li><a href="#"><span class="lni-linkedin-filled"></span></a></li>
                 <li><a href="#"><span class="lni-medium"></span></a></li>
-                <li><a href="#"><span class="lni-plane"></span></a></li>
+                <li><a href="#destinations"><span class="lni-plane"></span></a></li>
               </ul>
             </div>
             

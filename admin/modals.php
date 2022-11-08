@@ -20,7 +20,7 @@
 </script>
 
 <div class="modal fade" id="editDestinationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle"><i id="icon" class="las la-map"></i> Add Destinations</h5>
@@ -46,18 +46,12 @@
             </div>
             <input type="text" class="form-control" name="name" required>
           </div>
-          <div class="input-group mb-2 mr-sm-2">
+          <!-- <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
               <div class="input-group-text">Inclusion</div>
             </div>
             <input type="text" class="form-control" name="inclusion" required >
-          </div>
-          <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-              <div class="input-group-text">Description</div>
-            </div>
-            <input type="text" class="form-control" name="description" required>
-          </div>
+          </div> -->
           <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
               <div class="input-group-text">Price</div>
@@ -70,6 +64,68 @@
             </div>
             <input type="text" class="form-control" name="trailer" required>
           </div>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Description</div>
+            </div>
+            <textarea class="form-control" name="description" required rows=5></textarea>
+          </div>
+          <!-- <div class="input-group mb-2 mr-sm-2"> -->
+           <!-- Start of inclusions -->
+           <div class="input-group-text" >Inclusions</div>
+           <h5>Air Transport</h5>
+          <div class="row inclusions" data-max-inclu="1">
+              
+              <div class="col-md-6">
+                <input type="checkbox" name="inclusions[]" id="inclusions1" required value="O1">
+                <span> Roundtrip Airfare via Philippines Airline</span>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" name="inclusions[]" id="inclusions2" required value="O2">
+                <span"> One-way Trip Airfare via Philippines Airline</span>
+              </div>
+          </div>
+          <h5>Accomodation</h5>
+          <div class="row inclusions" data-max-inclu="1">
+                
+              <div class="col-md-6">
+                <input type="checkbox" name="inclusions[]" id="inclusions3" required value="O3">
+                <span> 1 night accomodation</span>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" name="inclusions[]" id="inclusions4" required value="O4">
+                <span> 2 nights accomodation</span>
+              </div>
+            </div>
+            
+            <h5>Foods</h5>
+          <div class="row inclusions" data-max-inclu="1">
+              
+              <div class="col-md-6">
+                <input type="checkbox" name="inclusions[]" id="inclusions5" required value="O5">
+                <span> Daily Breakfast</span>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" name="inclusions[]" id="inclusions6" required value="O6">
+                <span> Daily Breakfast,Lunch,Dinner</span>
+              </div>
+          </div>
+          <h5>Tour and Service</h5>
+          <div class="row inclusions" data-max-inclu="1">
+              
+              <div class="col-md-6">
+                <input type="checkbox" name="inclusions[]" id="inclusions7" required value="O7">
+                <span"> Tour guide and transportation</span>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" name="inclusions[]" id="inclusions8" required value="O8">
+                <span> First day hotel pickup and guide</span>
+              </div>
+          </div>
+
+          <!-- end of enclusions -->
+          <!-- </div> -->
+          
           <input hidden class="form-control" name="id">
       </div>
       <div class="modal-footer">

@@ -2,8 +2,8 @@
 require ('../connect.php');
 $id = $_POST['id'];
 $name = $_POST['name'];
-$inclu = $_POST['inclusion'];
-$desc = $_POST['description'];
+$inclu = json_encode($_POST['inclusions']);
+$desc = mysqli_real_escape_string($connection, $_POST['description']);
 $price = $_POST['price'];
 $trailer = $_POST['trailer'];
 

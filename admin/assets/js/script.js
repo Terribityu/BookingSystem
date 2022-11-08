@@ -11,6 +11,7 @@ $(document).ready(function(){
 			success:function(data)
 			{
 				$('#viewRecords tbody').html(data);
+                $('#mytable').paging({limit:10});
 			}
 		});
 	}
@@ -32,8 +33,17 @@ $(document).ready(function(){
 	$("#editDestinationModal").on("hidden.bs.modal", function () {
      $("#user-availability-status").html("");
       $("#insert").removeAttr('disabled','');
+	  $("#inclusions1").removeAttr('disabled','');
+	  $("#inclusions2").removeAttr('disabled','');
+	  $("#inclusions3").removeAttr('disabled','');
+	  $("#inclusions4").removeAttr('disabled','');
+	  $("#inclusions5").removeAttr('disabled','');
+	  $("#inclusions6").removeAttr('disabled','');
+	  $("#inclusions7").removeAttr('disabled','');
+	  $("#inclusions8").removeAttr('disabled','');
       $("#id").removeClass("is-valid")
       $("#id").removeClass("is-invalid");
+	  $('#editForm')[0].reset();  
 });
 
 	$('#add').click(function(){  
@@ -70,6 +80,51 @@ $(document).ready(function(){
 	});
 	});
 
+	function getInclusions(inclu){
+    
+		console.log(inclu);
+		console.log($('#inclusions1').val());
+		if(inclu[0] == "O1"){
+			$('#inclusions1').prop('checked',true);
+			$("#destInclu").html("Roundtrip Airfare via Philippines Airline");
+			$('#inclusions2').attr("disabled", true);
+		}else if(inclu[0] == "O2"){
+			$('#inclusions2').prop('checked',true);
+			$("#destInclu").html("One-way Trip Airfare via Philippines Airline");
+			$('#inclusions1').attr("disabled", true);
+		}
+		
+		if(inclu[1] == "O3"){
+			$('#inclusions3').prop('checked',true);
+			$("#destInclu1").html("1 night accomodation");
+			$('#inclusions4').attr("disabled", true);
+		}else if(inclu[1] == "O4"){
+			$('#inclusions4').prop('checked',true);
+			$("#destInclu1").html("2 nights accomodation");
+			$('#inclusions3').attr("disabled", true);
+		}
+	
+		if(inclu[2] == "O5"){
+			$('#inclusions5').prop('checked',true);
+			$("#destInclu2").html("Daily Breakfast, Dinner");
+			$('#inclusions6').attr("disabled", true);
+		}else if(inclu[2] == "O6"){
+			$('#inclusions6').prop('checked',true);
+			$("#destInclu2").html("Daily Breakfast,Lunch,Dinner");
+			$('#inclusions5').attr("disabled", true);
+		}
+		
+		if(inclu[3] == "O7"){
+			$('#inclusions7').prop('checked',true);
+			$("#destInclu3").html("Tour guide and transportation");
+			$('#inclusions8').attr("disabled", true);
+		}else if(inclu[3] == "O8"){
+			$('#inclusions8').prop('checked',true);
+			$("#destInclu3").html("First day hotel pickup and guide");
+			$('#inclusions7').attr("disabled", true);
+		}
+	}
+
 	$(document).on('click','#edit',function(){
 		var id = $(this).attr("value");
 		$.ajax({
@@ -77,9 +132,12 @@ $(document).ready(function(){
 			url: 'database/destination/viewRecord.php?id='+id,
 			dataType: 'json',
 			success: function (data) {
+				var inclu = JSON.parse(data["destInclu"]);
+            
+            	getInclusions(inclu);
 				$("#editForm [name='id']").val(data["destID"]);
 				$("#editForm [name='name']").val(data["destName"]);
-				$("#editForm [name='inclusion']").val(data["destInclu"]);
+				// $("#editForm [name='inclusion']").val(data["destInclu"]);
 				$("#editForm [name='description']").val(data["destDesc"]);
 				$("#editForm [name='price']").val(data["destPrice"]);
 				$("#editForm [name='trailer']").val(data["destTrailer"]);
@@ -106,7 +164,7 @@ $(document).ready(function(){
 			success: function () {
 				$('#editDestinationModal').modal('hide'); 
 				load_data();
-				window.location.href = "./destinations.php";
+				// window.location.href = "./destinations.php";
 			},
 			error: function(xhr , status , error) {
 				$('body').html("<h1>"+xhr['status']+" "+error+"</h1>");
@@ -173,4 +231,22 @@ $(document).ready(function(){
 	});
 	});
 	
+	$("input[type=checkbox]").click(function (e) {
+		if ($(e.currentTarget).closest(".inclusions").length > 0) {
+			toggleInputs($(e.currentTarget).closest(".inclusions")[0]);        
+		}
+	});
+
+	function toggleInputs(questionElement) {
+		if ($(questionElement).data('max-inclu') == undefined) {
+			return true;
+		} else {
+			maxAnswers = parseInt($(questionElement).data('max-inclu'), 10); 
+			if ($(questionElement).find(":checked").length >= maxAnswers) {
+				$(questionElement).find(":not(:checked)").attr("disabled", true);
+			} else {
+				$(questionElement).find("input[type=checkbox]").attr("disabled", false);
+			}
+		}
+	}
 });

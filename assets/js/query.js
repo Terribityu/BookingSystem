@@ -24,21 +24,18 @@ function load_data(query)
     }
   });
 }
-  $(document).on("click","#cntactbtn", function(e){
-  e.preventDefault();
-  var data = $(this).serialize();
-$.ajax({
-  type: 'POST',
-  url: 'query/setElement.php',
-  data: data,
-  success: function () {
-      console.log(data);
-      $('#exampleModalCenter').modal('show'); 
-  }
-  , error : e  => console.log(e)
 
-});
-});
+function mySuccess() {
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Success",
+    text: "Check your email for more details.",
+    showConfirmButton: false,
+    timer: 2000,
+  });
+}
+
   $('#contactform').on("submit", function(e){
       e.preventDefault();
       var data = $(this).serialize();
@@ -48,7 +45,8 @@ $.ajax({
       data: data,
       success: function () {
           console.log(data);
-          $('#exampleModalCenter').modal('show'); 
+          $("#contactModal").modal("hide");
+          mySuccess();
       }
       , error : e  => console.log(e)
 
