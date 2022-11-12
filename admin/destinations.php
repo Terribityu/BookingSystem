@@ -10,7 +10,7 @@ require ('database/connect.php');
     	
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 		<span class="h1"> <i class="la la-map"></i> Destinations &nbsp</span>
-        <button id="add" type="button" class="btn btn-success" data-toggle="modal" data-target="#editDestinationModal" data-tooltip="tooltip" title="Add Destination" data-placement="right">
+        <button id="add" type="button" class="btn btn-success" data-toggle="modal" data-target="#editDestinationModal" title="Add Destination" data-placement="right">
 		<i class="la la-plus-circle"></i>
 		</button>
 
@@ -26,7 +26,7 @@ require ('database/connect.php');
                   </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="./index.php">
+                  <a class="nav-link" href="database/logout.php">
                   <i class="las la-power-off"></i>
                   </a>
                </li>

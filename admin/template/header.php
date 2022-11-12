@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['username'])){
+    header("location:./login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +33,7 @@
       <a href="index.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-table"></i> Dashboard</a>
       <a href="destinations.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-map"></i> Destinations </a>
       <a href="blogs.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-blog"></i> Blogs </a>
-      <a href="#" class="list-group-item list-group-item-action bg-light"> <i class="las la-user"></i> Clients </a>
-      <a href="#" class="list-group-item list-group-item-action bg-light"> <i class="las la-ticket-alt"></i> Tickets </a>
+      <a href="clients.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-user"></i> Clients </a>
+      <a href="tickets.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-ticket-alt"></i> Tickets </a>
       </div>
     </div>

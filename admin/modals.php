@@ -149,7 +149,10 @@
           <label for="blogtitle" class="form-label">Title:</label>
           <input type="text" class="form-control" id="blogtitle" name="blogtitle" placeholder="Title" autocomplete="off" required>
           <label for="blogauthor" class="form-label">Author:</label>
-          <input type="text" class="form-control" id="blogtitle" name="blogauthor" placeholder="Author" autocomplete="off" required>
+          <input type="text" class="form-control" id="blogauthor" name="blogauthor" placeholder="Author" autocomplete="off" required>
+          <label for="blogdestination" class="form-label">Destination:</label>
+          <select class="form-control" id="blogdestination" name="blogdestination" placeholder="Destination" autocomplete="off" required>
+          </select>
           <label for="blogbody" class="form-label">Body:</label>
           <textarea id="blogbody" class="form-control" name="blogbody" placeholder="Type Here . . .">
           </textarea>

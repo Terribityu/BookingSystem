@@ -15,7 +15,7 @@ include("./modal.php");
                    <div class="col-lg-12">
                        <nav class="navbar navbar-expand-lg">
                            <a class="navbar-brand" href="index.php">
-                               <img src="./assets/logo/logo.png" alt="Logo">
+                               <img src="./assets/logo/logo-white.png" alt="Logo">
                            </a>
                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                <span class="toggler-icon"></span>
@@ -118,7 +118,7 @@ include("./modal.php");
                     <div class="section-title text-center pb-40">
                         <div class="line m-auto"></div>
                         <h3 class="title">Ready, Set, Gala! <span> Comes with everything you need to get started!</span></h3>
-                        <button type="button" id="allDest" class="destAdd btn btn-outline-dark know-more m-2 mt-0">Show More</button>
+                        <button type="button" id="allDest" class="btn btn-outline-dark know-more m-2 mt-0">Show More</button>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -302,11 +302,12 @@ include("./modal.php");
                 <div class="col-lg-6">
                     <div class="section-title pb-35">
                         <div class="line"></div>
-                        <h3 class="title"><span>Our Recent</span> Blog Posts</h3>
+                        <h3 class="title"><span>Our Recent</span> Blog Posts 
+                        <button type="button" id="allBlogs" class="btn btn-outline-dark know-more ">Explore</button></h3>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
-            <div class="row justify-content-center">
+            <div id="display4" class="row justify-content-center">
                 <div class="col-lg-4 col-md-7">
                     <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="blog-image">
@@ -317,7 +318,7 @@ include("./modal.php");
                                 <li>Posted By: <a href="#">Admin</a></li>
                                 <li>03 June, 2023</li>
                             </ul>
-                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+                            <p class="text">Title</p>
                             <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single blog -->
@@ -377,7 +378,9 @@ include("./modal.php");
           <div class="row">
 
             <div class="col-sm">
-              <a href="#" class="footer-logo">Ready, Set, Gala!</a>
+              <a href="#" class="footer-logo">
+              <img src="./assets/logo/logo-white-96.png" alt="Logo"></br>
+              Ready, Set, Gala!</a>
               <p class="copyright">
                 <small>&copy; 2022</small>
               </p>

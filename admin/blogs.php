@@ -13,6 +13,12 @@ require ('database/connect.php');
         <button id="addblogs" type="button" class="btn btn-success" data-toggle="modal" data-target="#editBlogsModal" data-tooltip="tooltip" title="Create Blog" data-placement="right">
 		<i class="la la-plus-circle"></i>
 		</button>
+		<button id="pendingblogs" type="button" class="ml-3 btn btn-primary" title="Pending" data-placement="right" value="active">
+		<!-- <i class="la la-plus-circle"></i> -->Pending
+		</button>
+		<button id="approvedblogs" type="button" class="ml-3 btn btn-outline-primary" title="Approved" data-placement="right">
+		<!-- <i class="la la-plus-circle"></i> -->Approved
+		</button>
 
 		<form class="form-inline col-md-4 offset-md-3" >
 			<i class="la la-search" style="font-size: 25px"></i>
@@ -26,7 +32,7 @@ require ('database/connect.php');
                   </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="./index.php">
+                  <a class="nav-link" href="database/logout.php">
                   <i class="las la-power-off"></i>
                   </a>
                </li>
@@ -41,8 +47,10 @@ require ('database/connect.php');
 				<th>ID</th>
 				<th>Title</th>
 				<th>Author</th>
+				<th>Destination</th>
 				<th>Description</th>
 				<th>Date</th>
+				<th>Status</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -50,7 +58,11 @@ require ('database/connect.php');
 	</table>
 </div>
 </div>
-<!-- </div> -->
-<?php
-require ('template/footer.php');
-?>
+</div>
+
+<script src="./assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./assets/js/blogs.js"></script>
+<script type="text/javascript" src="./assets/js/paging.js"></script> 
+
+</body>
+</html>

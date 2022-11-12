@@ -6,7 +6,10 @@ if(isset($query)){
 
 }else{
 	$query = "SELECT * FROM destination";
-	$count = 0;
+	
+}
+
+$count = 0;
 	$result = mysqli_query($connection , $query);
 	if(mysqli_num_rows($result) > 0)
 	{
@@ -16,7 +19,7 @@ if(isset($query)){
 				echo '<div class="col-lg-4 col-md-7 col-sm-8">
 							<div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
 								<div class="services-icon">
-									<img class="shape" height="250px" width="400px" src="./assets/destinations/'.$row['destImg'].'" alt="Destination Img">
+									<img class="shape" src="./assets/destinations/'.$row['destImg'].'" alt="Destination Img">
 									<!-- <img class="shape-1" src="./assets/img/" alt="Destination Img"> -->
 									<!-- <i class="lni-baloon"></i> -->
 								</div>
@@ -32,7 +35,7 @@ if(isset($query)){
 				echo '<div class="col-lg-4 col-md-7 col-sm-8">
 							<div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
 								<div class="services-icon">
-									<img class="shape" height="250px" width="400px" src="./assets/destinations/'.$row['destImg'].'" alt="Destination Img">
+									<img class="shape" src="./assets/destinations/'.$row['destImg'].'" alt="Destination Img">
 									<!-- <img class="shape-1" src="./assets/img/" alt="Destination Img"> -->
 									<!-- <i class="lni-baloon"></i> -->
 								</div>
@@ -50,7 +53,5 @@ if(isset($query)){
 	{
 		echo ' <h5 style="text-align:center"><i class="la la-search"></i> No Result Found<h5>';
 	}
-}
-
 
 ?>

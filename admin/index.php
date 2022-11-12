@@ -25,7 +25,7 @@ require ('database/connect.php');
                   </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="./index.php">
+                  <a class="nav-link" href="database/logout.php">
                   <i class="las la-power-off"></i>
                   </a>
                </li>
@@ -44,7 +44,7 @@ require ('database/connect.php');
                            <div class="icon">
                               <i class="la la-map la-2x"></i>
                            </div>
-                           <a href="#" class="small-box-footer">More info <i class="las la-arrow-circle-right"></i></a>
+                           <a href="destinations.php" class="small-box-footer">More info <i class="las la-arrow-circle-right"></i></a>
                         </div>
                      </div>
                      <!-- ./col -->
@@ -58,7 +58,7 @@ require ('database/connect.php');
                            <div class="icon">
                               <i class="la la-users la-2x"></i>
                            </div>
-                           <a href="#" class="small-box-footer">More info <i class="las la-arrow-circle-right"></i></a>
+                           <a href="clients.php" class="small-box-footer">More info <i class="las la-arrow-circle-right"></i></a>
                         </div>
                      </div>
                      <!-- ./col -->
@@ -76,22 +76,20 @@ require ('database/connect.php');
                         </div>
                      </div>
                   </div>
-
+<!-- 
 		<div class="row">
-<!-- ./col -->
+
                      <div class="col-lg-12 col-12">
-                        <!-- small box -->
                         <div class="small-box">
                            <div class="inner" style="background-color: #fff">
                               <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
                            </div>
                         </div>
                      </div>
-                     <!-- ./col -->
-</div>
+</div> -->
 
 </div>
-
+<!-- 
 <script>
 window.onload = function () {
 
@@ -128,7 +126,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 chart.render();
 
 }
-</script>
+</script> -->
 <!-- </div> -->
 <?php
 require ('template/footer.php');

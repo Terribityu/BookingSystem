@@ -14,7 +14,7 @@
    <script src="./assets/js/main.js"></script>
    <script src="./assets/js/query.js"></script>
    
-   
+   <script src="./assets/js/blogs.js"></script>
 </body>
 
 </html>

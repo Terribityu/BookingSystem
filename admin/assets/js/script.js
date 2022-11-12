@@ -16,6 +16,7 @@ $(document).ready(function(){
 		});
 	}
 
+	
 	$('#search_text').keyup(function(){
 		var search = $(this).val();
 		if(search != '')
@@ -56,7 +57,6 @@ $(document).ready(function(){
 
       });
 
-		$(document).on('click','#add',function(e){
 		$('#editForm').on("submit", function(e){
 			e.preventDefault();
 			var data = $(this).serialize();
@@ -70,14 +70,12 @@ $(document).ready(function(){
 			success: function (data) {
 				console.log(data);
                 $('#editDestinationModal').modal('hide'); 
-				load_data();  
-				window.location.href = "./destinations.php";
+				load_data();
 			},
 			error: function(xhr , status , error) {
 				$('body').html("<h1>"+xhr['status']+" "+error+"</h1>");
 			}
 		});
-	});
 	});
 
 	function getInclusions(inclu){
@@ -143,6 +141,9 @@ $(document).ready(function(){
 				$('body').html("<h1>"+xhr['status']+" "+error+"</h1>");
 			}
 		});
+
+	});
+
 		$('#editForm').on("submit", function(e){
 			e.preventDefault();
 			var data = $(this).serialize();
@@ -151,8 +152,8 @@ $(document).ready(function(){
 			url: 'database/destination/updateRecord.php',
 			data: new FormData(this),
 			contentType: false,
-            cache: false,
-            processData:false,
+			cache: false,
+			processData:false,
 			success: function () {
 				$('#editDestinationModal').modal('hide'); 
 				load_data();
@@ -163,8 +164,6 @@ $(document).ready(function(){
 				console.log(xhr,status,error);
 			}
 		});
-	});
-
 	});
 
 		$(document).on('click','#delete',function(){
@@ -202,26 +201,6 @@ $(document).ready(function(){
 			preview.src = URL.createObjectURL(file);
 		}
     });
-
-	$(document).on('click','#addblogs',function(e){
-		$('#editForm').on("submit", function(e){
-			e.preventDefault();
-			var data = $(this).serialize();
-		$.ajax({
-			type: 'POST',
-			url: 'database/destination/addRecord.php',
-			data: data,
-			success: function (data) {
-				console.log(data);
-                $('#editBlogsModal').modal('hide'); 
-				load_blogs();
-			},
-			error: function(xhr , status , error) {
-				$('body').html("<h1>"+xhr['status']+" "+error+"</h1>");
-			}
-		});
-	});
-	});
 	
 	$("input[type=checkbox]").click(function (e) {
 		if ($(e.currentTarget).closest(".inclusions").length > 0) {

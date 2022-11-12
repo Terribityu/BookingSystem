@@ -8,7 +8,7 @@ function load_data(query)
 {
  var link = $(".active [class='page-scroll']").attr('href')
 
- if(link=="#destinations"){
+ if(link=="#destinations" || link=="#blogs"){
   $(".navbar-area").css("background-color","Lightgray");
  }else{
   $(".navbar-area").css("background-color","");
@@ -35,6 +35,10 @@ function mySuccess() {
     timer: 2000,
   });
 }
+
+  $('#contactModal').on("hidden.bs.modal",function(){
+    $('#contactform')[0].reset();
+  });
 
   $('#contactform').on("submit", function(e){
       e.preventDefault();
@@ -67,7 +71,6 @@ $("#myNav").on("hidden.bs.modal", function (e) {
 $(document).on('click','#destAdd',function(e){
   e.preventDefault();
   var dest = $(this).attr("value");
-  var dest = $(this).attr("value");
   console.log(dest);
 
   $.ajax({
@@ -99,10 +102,10 @@ $(document).on('click','#bookNow', function(e){
   var book = $(this).attr("value");
   var row = jQuery.parseJSON(localStorage.getItem("row"));
   console.log(row.destPrice);
-
+  $("#destid").val(row.destID);
   $("#bookLabel").html(row.destName);
   $("#bookForm [name='price']").val(row.destPrice);
- 
+  
 });
 
 $("#bookForm [name='nums']").keyup(function(){
@@ -113,6 +116,19 @@ $("#bookForm [name='nums']").keyup(function(){
   $("#bookForm [name='price']").val(price*num);
 });
 
+$('#bookForm').on('submit',function(e){
+  e.preventDefault();
+  var data = $(this).serialize();
+  $.ajax({
+    url: 'query/setElement.php?booknew=true',
+    method: "post",
+    data: data,
+    success: function(data){
+      console.log(data);
+      $('#bookModal').modal('hide'); 
+    }
+  });
+})
 
 function getInclusions(inclu){
     

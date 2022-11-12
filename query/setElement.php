@@ -17,5 +17,9 @@ if(isset($btncontact)){
 	mysqli_query($connection , $query);
 }	
 
+if(isset($_GET['booknew'])){
+	$query = "INSERT INTO bookings VALUES(null,'$fname','$lname','$email', '$nums', '$destid', now())";
+	mysqli_query($connection , $query);
+}
 
 ?>

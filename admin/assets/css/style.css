@@ -93,3 +93,12 @@ body {
   background: #187ed5;
   font-weight: bold;
 }
+
+.errorClass {
+  border: thin solid red;
+}
+
+.errormsg {
+  font-size: 12;
+  color: red;
+}

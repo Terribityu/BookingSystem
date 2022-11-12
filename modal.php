@@ -32,6 +32,7 @@
                     </div>
                     <div class="row justify-content-center">
                       <div class="col-lg-11">
+                      <p> Details: </p>
                             <p id="destDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -79,6 +80,7 @@
                         <label for="amount" class="form-label">Price:</label>
                         <input type="number" class="form-control" name="price" min="1" readonly>
                     </div>
+                    <input type="hidden" name="destid" id="destid">
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" name="bnt_book">Book</button>

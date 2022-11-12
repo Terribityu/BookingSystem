@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="./assets/logo/logo-white.png" type="image/png">
     <!-- ======== Animate CSS ========== -->
     <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
     <!--====== Bootstrap CSS ======-->
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/default.css">
-		<!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+		<link rel="stylesheet" href="./assets/css/style.css">
     
     
 </head>

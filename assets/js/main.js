@@ -23,10 +23,10 @@
         var scroll = $(window).scrollTop();
         if (scroll < 20) {
             $(".navbar-area").removeClass("sticky");
-            $(".navbar .navbar-brand img").attr("src", "./assets/logo/logo.png");
+            $(".navbar .navbar-brand img").attr("src", "./assets/logo/logo-white.png");
         } else {
             $(".navbar-area").addClass("sticky");
-            $(".navbar .navbar-brand img").attr("src", "./assets/logo/logo.png");
+            $(".navbar .navbar-brand img").attr("src", "./assets/logo/logo-black.png");
         }
     });
 

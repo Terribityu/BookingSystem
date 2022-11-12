@@ -206,6 +206,8 @@ p {
 /*===== NAVBAR =====*/
 .navbar-area {
     position: absolute;
+    -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
     top: 0;
     left: 0;
     width: 100%;
@@ -617,7 +619,7 @@ p {
       transition: all 0.3s ease-out 0s; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .single-services .services-content .services-title a {
-          font-size: 24px; } }
+          font-size: 18px; } }
       @media (max-width: 767px) {
         .single-services .services-content .services-title a {
           font-size: 20px; } }
