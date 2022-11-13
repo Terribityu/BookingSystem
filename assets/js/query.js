@@ -118,22 +118,37 @@ $("#bookForm [name='nums']").keyup(function(){
 
 $('#bookForm').on('submit',function(e){
   e.preventDefault();
-  var data = $(this).serialize();
+  clearTimeout(timerId);
+  var otp = $('#otp').val();
   $.ajax({
-    url: 'query/setElement.php?booknew=true',
-    method: "post",
-    data: data,
-    success: function(data){
-      console.log(data);
-      $('#bookModal').modal('hide'); 
+    url:"query/setElement.php",
+    method:"post",
+    data:{verifyotp:otp},
+    success:function(data1)
+    {
+      if(data1 == true){
+        var data = $(this).serialize();
+        $.ajax({
+          url: 'query/setElement.php?booknew=true',
+          method: "post",
+          data: data,
+          success: function(data){
+            console.log(data);
+            $('#bookModal').modal('hide'); 
+            mySuccess();
+          }
+        });
+      }else{
+        alert("OTP code is incorrect.")
+      }
     }
-  });
+    });
 })
 
 function getInclusions(inclu){
     
   console.log(inclu);
-  console.log($('#inclusions1').val());
+  // console.log($('#inclusions1').val());
   if(inclu[0] == "O1"){
     $("#destInclu").html("Roundtrip Airfare via Philippines Airline");
   }else if(inclu[0] == "O2"){
@@ -159,4 +174,79 @@ function getInclusions(inclu){
   }
 }
 
+$("#email").keyup(function(){
+  var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+if (testEmail.test($(this).val())){
+  $("#otp").prop('disabled', false);
+  $(this).removeClass("errorClass");
+}else{
+  $("#otp").prop('disabled', true);
+}
+});
+
+$("#otp").keyup(function(){
+  var otp = $(this).val();
+  $("#otp").addClass("errorClass");
+
+  $.ajax({
+    url:"query/setElement.php",
+    method:"post",
+    data:{verifyotp:otp},
+    success:function(data)
+    {
+      if(data == true){
+        $("#otp").removeClass("errorClass");
+        return true;
+      }else{
+        return false;
+      }
+    }
+  });
+});
+
+var timerId;
+
+$(document).on('click','#sendotp', function(e){
+  e.preventDefault();
+  var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+  if(!testEmail.test($("#email").val())){
+    $("#email").addClass("errorClass");
+  }else{
+    email =  $("#email").val();
+    $.ajax({
+      url: 'query/otp.php',
+      method: "post",
+      data: {email:email},
+      success: function(data){
+        console.log(data);
+        timerId = setInterval(countdown, 1000);
+      }
+    });
+  }
+})
+var timeLeft = 60;
+    
+$('#bookModal').on("hidden.bs.modal",function(){
+  $('#bookForm')[0].reset();
+  $.ajax({
+    url: 'query/setElement.php',
+    method: "post",
+    data: {close:'true'},
+    success: function(data){
+      console.log(data);
+    }
+  });
+});
+
+function countdown() {
+
+  if (timeLeft == -1) {
+    clearTimeout(timerId);
+    $('#sendotp').html('Resend verification: <a id="sendotp" href>here</a>');
+  } else {
+    $('#sendotp').removeAttr('href');
+    $('#sendotp').html('Resend verification: ' + timeLeft);
+    timeLeft--;
+  }
+}
 });

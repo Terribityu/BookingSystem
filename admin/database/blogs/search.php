@@ -4,12 +4,12 @@ if(isset($_POST["query"]))
 {
 	$search = mysqli_real_escape_string($connection, $_POST["query"]);
 	$query = "SELECT destination.*, blogs.* FROM blogs INNER JOIN destination ON blogs.destID = destination.destID
-	where blogs.blogID like '%$search%'
+	where (blogs.blogID like '%$search%'
 	or blogs.blogTitle like '%$search%'
 	or blogs.blogAuthor like '%$search%'
 	or blogs.blogDesc like '%$search%'
 	or blogs.blogDate like '%$search%'
-	or destination.destName like '%$search%'
+	or destination.destName like '%$search%')
 	and blogs.status = '". $_POST['stats']."'";
 	
 }else {

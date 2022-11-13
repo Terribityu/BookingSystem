@@ -24,6 +24,9 @@
                           <li>
                             <span id="destInclu2"> Kalapati </span>
                           </li>
+                          <li>
+                            <span id="destInclu3"> Kalapati </span>
+                          </li>
                         </ul>
                       </div>
                       <div class="col-lg-4">
@@ -68,9 +71,14 @@
                         <label for="lname" class="form-label">Last Name:</label>
                         <input type="text" class="form-control" name="lname" required>
                     </div>
-                    <div class="col-md-12 ">
+                    <div class="col-md-8 ">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" name="email" required>
+                        <input type="email" id="email" class="form-control" name="email" required>
+                        <a id = "sendotp" href>Send OTP verication Code.</a>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="email" class="form-label">OTP:</label>
+                        <input type="number" id="otp" class="form-control" name="otp" required disabled>
                     </div>
                     <div class="col-md-4 ">
                         <label for="nums" class="form-label">Number of Seats:</label>

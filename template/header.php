@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     
     <!--====== Title ======-->
-    <title>Booking System</title>
+    <title>Ready, Set, GALA!</title>
     
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="./assets/logo/logo-white.png" type="image/png">
+    <link rel="shortcut icon" href="./assets/logo/logo-black-256.png" type="image/png">
     <!-- ======== Animate CSS ========== -->
     <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
     <!--====== Bootstrap CSS ======-->

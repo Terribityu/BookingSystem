@@ -3,6 +3,20 @@ textarea {
   resize: none;
 }
 
+.errorClass {
+  border: thin solid red;
+}
+
+#sendotp {
+  font-size: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
