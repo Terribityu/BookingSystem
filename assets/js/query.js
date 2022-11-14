@@ -121,30 +121,34 @@ $('#bookForm').on('submit',function(e){
   clearTimeout(timerId);
   var otp = $('#otp').val();
   $.ajax({
-    url:"query/setElement.php",
-    method:"post",
-    data:{verifyotp:otp},
+    url:"query/setElement.php?verifyotp="+otp,
+    method:"GET",
     success:function(data1)
     {
-      if(data1 == true){
-        var data = $(this).serialize();
-        $.ajax({
-          url: 'query/setElement.php?booknew=true',
-          method: "post",
-          data: data,
-          success: function(data){
-            console.log(data);
-            $('#bookModal').modal('hide'); 
-            mySuccess();
-          }
-        });
-      }else{
-        alert("OTP code is incorrect.")
-      }
+      insertBookings(data1)
     }
     });
 })
 
+function insertBookings(condi){
+  
+  var data = $('#bookForm').serialize();
+
+  if(condi == true){
+    $.ajax({
+      url: 'query/receipt.php',
+      method: "post",
+      data: data,
+      success: function(data){
+        console.log(data);
+        $('#bookModal').modal('hide'); 
+        mySuccess();
+      }
+    });
+  }else{
+    alert("OTP code is incorrect.")
+  }
+}
 function getInclusions(inclu){
     
   console.log(inclu);
@@ -189,9 +193,8 @@ $("#otp").keyup(function(){
   $("#otp").addClass("errorClass");
 
   $.ajax({
-    url:"query/setElement.php",
-    method:"post",
-    data:{verifyotp:otp},
+    url:"query/setElement.php?verifyotp="+otp,
+    method:"GET",
     success:function(data)
     {
       if(data == true){

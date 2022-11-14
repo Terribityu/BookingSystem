@@ -89,6 +89,7 @@
                         <input type="number" class="form-control" name="price" min="1" readonly>
                     </div>
                     <input type="hidden" name="destid" id="destid">
+                    <input type="hidden" name="booknew" id="booknew" value="true">
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" name="bnt_book">Book</button>
