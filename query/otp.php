@@ -31,7 +31,7 @@ try {
     //Recipients
     $mail->setFrom('readysettravelph@gmail.com', 'Ready, Set, GALA!');
     // $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-    $mail->addAddress('fascinatingact@gmail.com');               //Name is optional
+    $mail->addAddress($email);               //Name is optional
     $mail->addReplyTo('readysettravelph@gmail.com', 'Ready, Set, GALA!');
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');

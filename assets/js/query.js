@@ -42,20 +42,34 @@ function mySuccess() {
 
   $('#contactform').on("submit", function(e){
       e.preventDefault();
-      var data = $(this).serialize();
+      var formdata = $(this).serialize();
   $.ajax({
       type: 'POST',
       url: 'query/setElement.php',
-      data: data,
-      success: function () {
+      data: formdata,
+      success: function (data) {
           console.log(data);
           $("#contactModal").modal("hide");
           mySuccess();
+          sendemail(formdata);
       }
       , error : e  => console.log(e)
 
   });
 });
+
+function sendemail(info){
+  console.log(info);
+  $.ajax({
+    type: 'POST',
+    url: 'query/email.php',
+    data: info,
+    success: function (data) {
+        console.log(data);
+    }
+    , error : e  => console.log(e)
+});
+}
 
 $("#allDest").click(function(e){
   window.location.href= "./destination.php";
@@ -119,36 +133,24 @@ $("#bookForm [name='nums']").keyup(function(){
 $('#bookForm').on('submit',function(e){
   e.preventDefault();
   clearTimeout(timerId);
+  var formdata = $(this).serialize();
   var otp = $('#otp').val();
   $.ajax({
     url:"query/setElement.php?verifyotp="+otp,
     method:"GET",
     success:function(data1)
     {
-      insertBookings(data1)
+      if(data1 == true){
+        $('#bookModal').modal('hide'); 
+        mySuccess();
+        sendemail(formdata)
+      }else{
+        alert("OTP code is incorrect.")
+      }
     }
     });
 })
 
-function insertBookings(condi){
-  
-  var data = $('#bookForm').serialize();
-
-  if(condi == true){
-    $.ajax({
-      url: 'query/receipt.php',
-      method: "post",
-      data: data,
-      success: function(data){
-        console.log(data);
-        $('#bookModal').modal('hide'); 
-        mySuccess();
-      }
-    });
-  }else{
-    alert("OTP code is incorrect.")
-  }
-}
 function getInclusions(inclu){
     
   console.log(inclu);
@@ -209,26 +211,48 @@ $("#otp").keyup(function(){
 
 var timerId;
 
-$(document).on('click','#sendotp', function(e){
+$(document).on('click','.sendotp', function(e){
   e.preventDefault();
   var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
   if(!testEmail.test($("#email").val())){
     $("#email").addClass("errorClass");
   }else{
     email =  $("#email").val();
+    $("#sendotp").removeClass("sendotp");
+    timerId = setInterval(countdown, 1000);
     $.ajax({
       url: 'query/otp.php',
       method: "post",
       data: {email:email},
       success: function(data){
         console.log(data);
-        timerId = setInterval(countdown, 1000);
       }
     });
   }
 })
 var timeLeft = 60;
     
+$(document).on('click','.resendotp', function(e){
+  e.preventDefault();
+  var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+  if(!testEmail.test($("#email").val())){
+    $("#email").addClass("errorClass");
+  }else{
+    email =  $("#email").val();
+    timeLeft = 60;
+    clearTimeout(timerId);
+    timerId = setInterval(countdown, 1000);
+    $.ajax({
+      url: 'query/otp.php',
+      method: "post",
+      data: {email:email},
+      success: function(data){
+        console.log(data);
+      }
+    });
+  }
+})
+
 $('#bookModal').on("hidden.bs.modal",function(){
   $('#bookForm')[0].reset();
   $.ajax({
@@ -236,6 +260,11 @@ $('#bookModal').on("hidden.bs.modal",function(){
     method: "post",
     data: {close:'true'},
     success: function(data){
+      clearTimeout(timerId);
+      timeLeft = 60;
+      $('#sendotp').html('Send OTP verication Code.');
+      $('#sendotp').attr('href',"");
+      $('#sendotp').addClass('sendotp');
       console.log(data);
     }
   });
@@ -245,7 +274,7 @@ function countdown() {
 
   if (timeLeft == -1) {
     clearTimeout(timerId);
-    $('#sendotp').html('Resend verification: <a id="sendotp" href>here</a>');
+    $('#sendotp').html('Resend verification: <a id="resendotp" class="resendotp" href>here</a>');
   } else {
     $('#sendotp').removeAttr('href');
     $('#sendotp').html('Resend verification: ' + timeLeft);

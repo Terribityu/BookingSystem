@@ -74,7 +74,7 @@
                     <div class="col-md-8 ">
                         <label for="email" class="form-label">Email:</label>
                         <input type="email" id="email" class="form-control" name="email" required>
-                        <a id = "sendotp" href>Send OTP verication Code.</a>
+                        <a id = "sendotp" class = "sendotp" href>Send OTP verication Code.</a>
                     </div>
                     <div class="col-md-4 ">
                         <label for="email" class="form-label">OTP:</label>
