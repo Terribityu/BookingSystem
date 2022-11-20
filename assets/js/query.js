@@ -25,6 +25,18 @@ function load_data(query)
   });
 }
 
+$('#search_destination').keyup(function(){
+  var search = $(this).val();
+  if(search != '')
+  {
+    load_data(search);
+  }
+  else
+  {
+    load_data();			
+  }
+});
+
 function mySuccess() {
   Swal.fire({
     position: "center",

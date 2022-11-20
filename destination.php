@@ -65,6 +65,11 @@ include("./modal.php");
                         <div class="line m-auto"></div>
                         <h3 class="title">Ready, Set, Gala!, <span> Comes with everything you need to get started!</span></h3>
                     </div> <!-- section title -->
+                    <div class="p-2 ">
+                        <form id="form" autocomplete="off" class="my-sm-3">
+                            <input type="text" placeholder="Search . . ." id="search_destination" class=" form-control w-75 mx-auto" autocomplete="off">
+                        </form>
+                    </div>
                 </div>
             </div> <!-- row -->
             <div id = "display3" class="row justify-content-center">

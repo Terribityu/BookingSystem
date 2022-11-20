@@ -99,14 +99,14 @@
     </div>
 </div>
 
-<div class="modal fade" id="contactModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="bookLabel" aria-hidden="true">
+<div class="modal fade" id="contactModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="contactLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="bookLabel"><i id="icon" class="lni-envelope"></i> Contact Us</h5>
+                <h5 class="modal-title" id="contactLabel"><i id="icon" class="lni-envelope"></i> Contact Us</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="bookBody">
+            <div class="modal-body" id="contactBody">
             <form id = "contactform">
               <!-- Name input -->
               <div class="form-outline mb-4">
@@ -132,4 +132,76 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Blog Modal -->
+
+  
+<div class="modal fade" id="blogModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="blogLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content" id = "destContent">
+          <div class="modal-header">
+              <h5 class="modal-title text-center fw-bold" id="blogLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                  <img class="img d-flex align-items-center justify-content-center" style="height:400px;" id="destImg" src="" alt="Destination">
+                  <div class="container pt-10">
+                    <div class="row justify-content-center">
+                        <center>
+                            <h3 id="blogTitle"> Title: </h3></center>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-4">
+                            <p id="blogAuthor"> Author: </p>
+                      </div>
+                      <div class="col-lg-4">
+                            <p id="blogDate"> Date: </p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-11">
+                      <p> Details: </p>
+                            <p id="blogDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                       
+            <div class="modal-footer" id="foot">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editBlogsModal" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle"><i id="icon" class="las la-map"></i> Create New Blog</h5>
+      </div>
+      <div class="modal-body">
+        <form id="tinyform">
+          <label for="blogtitle" class="form-label">Title:</label>
+          <input type="text" class="form-control" id="blogtitle" name="blogtitle" placeholder="Title" autocomplete="off" required>
+          <label for="blogauthor" class="form-label">Author:</label>
+          <input type="text" class="form-control" id="blogauthor" name="blogauthor" placeholder="Author" autocomplete="off" required>
+          <label for="blogdestination" class="form-label">Destination:</label>
+          <select class="form-control" id="blogdestination" name="blogdestination" placeholder="Destination" autocomplete="off" required>
+          </select>
+          <label for="blogbody" class="form-label">Body:</label>
+          <textarea id="blogbody" class="form-control" name="blogbody" placeholder="Type Here . . .">
+          </textarea>
+      </div>
+      <div class="modal-footer">
+          <input type="submit" class="btn btn-success" id="insert" />
+          <button type="button" class="btn btn-secondary" id="close" data-bs-dismiss="modal">Close</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

@@ -11,7 +11,16 @@ if(isset($viewDest)){
 		$row['destTrailer'] = "https://www.youtube.com/embed/".substr($row['destTrailer'], $pos+1); 
 	}
 	echo json_encode($row);
-}	
+}
+
+if(isset($blog)){
+	$id = $blog;
+	$query = "SELECT destination.*, blogs.* FROM blogs INNER JOIN destination ON blogs.destID = destination.destID
+	where blogs.blogID = $id";
+	$result = mysqli_query($connection , $query);
+	$row = mysqli_fetch_array($result);
+	echo json_encode($row);
+}
 
 if(isset($close)){
 	session_start();

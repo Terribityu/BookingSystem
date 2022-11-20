@@ -303,7 +303,7 @@ include("./modal.php");
                     <div class="section-title pb-35">
                         <div class="line"></div>
                         <h3 class="title"><span>Our Recent</span> Blog Posts 
-                        <button type="button" id="allBlogs" class="btn btn-outline-dark know-more ">Explore</button></h3>
+                        <button type="button" id="allBlogs" onclick="window.location.href='blogs.php'" class="btn btn-outline-dark know-more ">Explore</button></h3>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->

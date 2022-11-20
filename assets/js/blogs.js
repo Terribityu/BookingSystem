@@ -22,67 +22,6 @@ $(document).ready(function(){
 		});
     }
 
-	$("#allBlogs").click(function(e){
-		window.location.href= "./blogs.php";
-	  })
-
-    $(document).on('click','#approved',function(){
-		var id = $(this).attr("value");
-		var name = $(this).attr("data-value");
-		alertify.confirm('<i class="las la-check-circle"></i> Approve','Approve '+ name +' ?', function(){ 
-		$.ajax({
-			type: 'GET',
-			url: 'database/blogs/approved.php?id='+id,
-			success: function () { 
-				load_blogs();
-			},
-			error: function(xhr , status , error) {
-				$('body').html("<h1>"+xhr['status']+" "+error+"</h1>");
-			}
-		});
-	}
-     , function(){}).set({transition:'zoom'}).show(); ;
-		
-	});
-
-    $(document).on('click','#reject',function(){
-		var id = $(this).attr("value");
-		var name = $(this).attr("data-value");
-		alertify.confirm('<i class="las la-times-circle"></i> Reject','Reject '+ name +' ?', function(){ 
-		$.ajax({
-			type: 'GET',
-			url: 'database/blogs/deleteRecord.php?id='+id,
-			success: function () { 
-				load_blogs();
-			},
-			error: function(xhr , status , error) {
-				$('body').html("<h1>"+xhr['status']+" "+error+"</h1>");
-			}
-		});
-	}
-     , function(){}).set({transition:'zoom'}).show(); ;
-		
-	});
-
-    $(document).on('click','#delete',function(){
-		var id = $(this).attr("value");
-		var name = $(this).attr("data-value");
-		alertify.confirm('<i class="las la-trash-alt"></i> Delete','Confirm Delete '+ name +' ?', function(){ 
-		$.ajax({
-			type: 'GET',
-			url: 'database/blogs/deleteRecord.php?id='+id,
-			success: function () { 
-				load_blogs();
-			},
-			error: function(xhr , status , error) {
-				$('body').html("<h1>"+xhr['status']+" "+error+"</h1>");
-			}
-		});
-	}
-     , function(){}).set({transition:'zoom'}).show(); ;
-		
-	});
-
     $('#search_blogs').keyup(function(){
 		var search = $(this).val();
 		if(search != '')
@@ -98,7 +37,7 @@ $(document).ready(function(){
     function getDestination(){
         $.ajax({
 			type: 'POST',
-			url: 'database/blogs/getDestination.php',
+			url: 'admin/database/blogs/getDestination.php',
 			success: function (data) {
 				// console.log(data);
                 $('#blogdestination').html(data); 
@@ -122,7 +61,7 @@ $(document).ready(function(){
 			var data = $(this).serialize();
 		$.ajax({
 			type: 'POST',
-			url: 'database/blogs/addRecord.php',
+			url: 'admin/database/blogs/addRecord.php',
 			data: data,
             cache: false,
 			success: function () {
@@ -136,31 +75,31 @@ $(document).ready(function(){
 		});
 	});
 	
-
-    $(document).on('click','#pendingblogs', function(){
-        var pend = $(this);
-        var appr = $('#approvedblogs');
-
-        appr.removeClass("btn-primary");
-        appr.addClass("btn-outline-primary");
-        pend.removeClass("btn-outline-primary");
-        pend.addClass("btn-primary");
-        appr.val("");
-        pend.val("active");
-        load_blogs();
-    });
-
-    $(document).on('click','#approvedblogs', function(){
-        var pend = $('#pendingblogs');
-        var appr = $(this);
-
-        pend.removeClass("btn-primary");
-        pend.addClass("btn-outline-primary");
-        appr.removeClass("btn-outline-primary");
-        appr.addClass("btn-primary");
-        pend.val("");
-        appr.val("active");
-        load_blogs();
-    });
+	
+	$(document).on('click','#blogInfo',function(e){
+		e.preventDefault();
+		var blog = $(this).attr("value");
+		var dest = $(this).attr("data-value");
+		$("#blogModal").modal("show");
+		$.ajax({
+		  url: 'query/setElement.php',
+				method:"post",
+				dataType: 'json',
+		  data: {blog:blog, dest:dest},
+		  success: function (blog) {
+					// $('#destContent').html(dest); 
+			localStorage.setItem("blog",JSON.stringify(blog));
+					$('#blogLabel').html("Title: "+blog["blogTitle"]);
+					$('#destImg').attr('src',"./assets/destinations/"+blog["destImg"]);
+					$("#blogTitle").html("Title: "+blog["blogTitle"]);
+					$("#blogAuthor").html("Author: "+blog["blogAuthor"]);
+					$("#blogDate").html("Date: "+ blog["blogDate"]);
+					$("#blogDesc").html(blog["blogDesc"]);
+				   
+		  },error: function(xhr , status , error) {
+			$('body').html("<h1>"+xhr['status']+" "+error+"</h1>");
+		  }
+		});
+	  });
 
 });

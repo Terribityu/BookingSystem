@@ -3,7 +3,14 @@ include ('connect.php');
 extract($_POST);
 
 if(isset($query)){
-
+	$search = mysqli_real_escape_string($connection, $_POST["query"]);
+	$query = "SELECT * FROM destination 
+	where destID like '%$search%'
+	or destName like '%$search%'
+	or destInclu like '%$search%'
+	or destPrice like '%$search%'
+	or destImg like '%$search%'
+	or destTrailer like '%$search%'";
 }else{
 	$query = "SELECT * FROM destination";
 	

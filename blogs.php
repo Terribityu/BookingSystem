@@ -59,16 +59,22 @@ include("./modal.php");
 
 <!--====== BLOG PART START ======-->
     
-<section id="blog" class="blog-area pt-120">
+<div class="container px-3 pt-120">
+    <div class=" px-xl-3 py-3 my-3 text-center p-5 border rounded-3">
+
+        <h2 class=" fw-bold border-bottom pb-3 mb-3">Welcome To The Blog!</h2>
+
+
+        <div class="col-lg-6 mx-auto ">
+            <button id="addblogs" type="button" class="btn btn-outline-dark w-75" data-bs-toggle="modal" data-bs-target="#editBlogsModal">
+                Create Post
+            </button>
+        </div>
+    </div>
+</div>
+
+<section id="blog" class="blog-area">
     <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title pb-35">
-                        <div class="line"></div>
-                        <h3 class="title"><span>Our Recent</span> Blog Posts</h3>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
             <div id="display4" class="row justify-content-center">
                 <div class="col-lg-4 col-md-7">
                     <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -120,6 +126,10 @@ include("./modal.php");
     </section>
     
     <!--====== BLOG PART ENDS ======-->
+   <!-- ======= Sweet Alert ========= -->
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- ======== TinyMyce ========= -->
+  <script src="https://cdn.tiny.cloud/1/0zr1zh539s06toj7znrvwjimmsfs2j8s7g56z0sbly0d0a8u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
    <!--====== Jquery js ======-->
    <script src="./assets/js/jquery-1.12.4.min.js"></script>
@@ -127,11 +137,10 @@ include("./modal.php");
    <!--====== Bootstrap js ======-->
    <script src="./assets/js/bootstrap.bundle.min.js"></script>
    <script src="./assets/js/bootstrap.min.js"></script>
-   <!-- ======= Sweet Alert ========= -->
-   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
    <!--====== Main js ======-->
-   <script src="./assets/js/wow.min.js"></script>q
-   <script src="./assets/js/blogs.js"></script>q
+   <script src="./assets/js/wow.min.js"></script>
+   <script src="./assets/js/blogs.js"></script>
    
    
 </body>
