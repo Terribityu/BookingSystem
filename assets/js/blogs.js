@@ -34,6 +34,17 @@ $(document).ready(function(){
 		}
 	});
 
+	function mySuccess() {
+		Swal.fire({
+		  position: "center",
+		  icon: "success",
+		  title: "Success",
+		  text: "Please wait for admin confirmation.",
+		  showConfirmButton: false,
+		  timer: 2000,
+		});
+	  }
+
     function getDestination(){
         $.ajax({
 			type: 'POST',
@@ -49,14 +60,15 @@ $(document).ready(function(){
     }
     
     $("#editBlogsModal").on("hidden.bs.modal", function () {
-         $('#tinyform')[0].reset();  
+         $('#blogform')[0].reset();  
    });
 
 	$(document).on('click','#addblogs',function(e){
+		$('#blogform')[0].reset();  
         getDestination();
     });
 
-		$('#tinyform').on("submit", function(e){
+		$('#blogform').on("submit", function(e){
 			e.preventDefault();
 			var data = $(this).serialize();
 		$.ajax({
@@ -67,6 +79,7 @@ $(document).ready(function(){
 			success: function () {
 				console.log(data);
                 $('#editBlogsModal').modal('hide'); 
+				mySuccess();
 				load_blogs();
 			},
 			error: function(xhr , status , error) {
@@ -80,6 +93,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		var blog = $(this).attr("value");
 		var dest = $(this).attr("data-value");
+		console.log(blog,dest);
 		$("#blogModal").modal("show");
 		$.ajax({
 		  url: 'query/setElement.php',

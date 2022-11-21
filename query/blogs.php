@@ -9,13 +9,13 @@ if(isset($query))
 	or blogs.blogTitle like '%$search%'
 	or blogs.blogAuthor like '%$search%'
 	or blogs.blogDesc like '%$search%'
-	or blogs.blogDate like '%$search%')
-	or destination.destName like '%$search%'";
+	or blogs.blogDate like '%$search%'
+	or destination.destName like '%$search%') and status = 'approved'";
 	
 }else {
 	$query = "SELECT destination.*, blogs.blogID, blogs.blogTitle, blogs.blogAuthor, blogs.blogDesc,
 	DATE(blogs.blogDate) AS blogDate, blogs.status
-	 FROM blogs INNER JOIN destination ON blogs.destID = destination.destID";
+	 FROM blogs INNER JOIN destination ON blogs.destID = destination.destID where status = 'approved'";
 }
 
 $count = 0;
@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_array($result)) {
 									<li>Date: '.$row['blogDate'].'</li>
 								</ul>
 								<p class="text">'.$row['blogTitle'].'</p>
-								<a class="more" id="blogInfo" href="#" value="'.$row['destID'].'" data-value="'.$row['blogID'].'">Learn More <i class="lni-chevron-right"></i></a>
+								<a class="more" id="blogInfo" href="#" value="'.$row['blogID'].'" data-value="'.$row['destID'].'">Learn More <i class="lni-chevron-right"></i></a>
 							</div>
 						</div> <!-- single blog -->
 					</div> ';
@@ -53,7 +53,7 @@ while ($row = mysqli_fetch_array($result)) {
 									<li>Date: '.$row['blogDate'].'</li>
 								</ul>
 								<p class="text">'.$row['blogTitle'].'</p>
-								<a class="more" id="blogInfo" href="#" value="'.$row['destID'].'" data-value="'.$row['blogID'].'">Learn More <i class="lni-chevron-right"></i></a>
+								<a class="more" id="blogInfo" href="#" value="'.$row['blogID'].'" data-value="'.$row['destID'].'">Learn More <i class="lni-chevron-right"></i></a>
 							</div>
 						</div> <!-- single blog -->
 					</div> ';

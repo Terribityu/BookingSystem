@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="assets/alertifyjs/css/themes/default.min.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-  <script src="https://cdn.tiny.cloud/1/0zr1zh539s06toj7znrvwjimmsfs2j8s7g56z0sbly0d0a8u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <!-- <script src="https://cdn.tiny.cloud/1/0zr1zh539s06toj7znrvwjimmsfs2j8s7g56z0sbly0d0a8u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
   <script type="text/javascript" src="assets/alertifyjs/alertify.min.js"></script>
   <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>

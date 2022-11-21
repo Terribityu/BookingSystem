@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="./assets/css/carousel.css">
     <!--====== Line Icons CSS ======-->
     <link href=".\assets\css\lineicons.css" rel="stylesheet">
+    <!-- ======== TinyMyce ========= -->
+  <!-- <script src="https://cdn.tiny.cloud/1/0zr1zh539s06toj7znrvwjimmsfs2j8s7g56z0sbly0d0a8u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="./assets/css/navbar.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">

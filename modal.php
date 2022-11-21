@@ -1,4 +1,5 @@
-  
+
+
 <div class="modal fade" id="myNav" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="myNavLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg ">
         <div class="modal-content" id = "destContent">
@@ -185,7 +186,7 @@
         <h5 class="modal-title" id="exampleModalCenterTitle"><i id="icon" class="las la-map"></i> Create New Blog</h5>
       </div>
       <div class="modal-body">
-        <form id="tinyform">
+        <form id="blogform">
           <label for="blogtitle" class="form-label">Title:</label>
           <input type="text" class="form-control" id="blogtitle" name="blogtitle" placeholder="Title" autocomplete="off" required>
           <label for="blogauthor" class="form-label">Author:</label>
@@ -194,8 +195,7 @@
           <select class="form-control" id="blogdestination" name="blogdestination" placeholder="Destination" autocomplete="off" required>
           </select>
           <label for="blogbody" class="form-label">Body:</label>
-          <textarea id="blogbody" class="form-control" name="blogbody" placeholder="Type Here . . .">
-          </textarea>
+          <textarea rows="6" class="form-control" name="blogbody" placeholder="Type Here . . ."></textarea>
       </div>
       <div class="modal-footer">
           <input type="submit" class="btn btn-success" id="insert" />

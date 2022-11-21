@@ -1,6 +1,6 @@
 <?php
 require ('template/header.php');
-require ('modals.php');
+// require ('modals.php');
 require ('database/connect.php');
 ?>
 
@@ -10,9 +10,9 @@ require ('database/connect.php');
     	
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 		<span class="h1"> <i class="la la-map"></i> Blogs &nbsp</span>
-        <button id="addblogs" type="button" class="btn btn-success" data-toggle="modal" data-target="#editBlogsModal" data-tooltip="tooltip" title="Create Blog" data-placement="right">
+        <!-- <button id="addblogs" type="button" class="btn btn-success" data-toggle="modal" data-target="#editBlogsModal" data-tooltip="tooltip" title="Create Blog" data-placement="right">
 		<i class="la la-plus-circle"></i>
-		</button>
+		</button> -->
 		<button id="pendingblogs" type="button" class="ml-3 btn btn-primary" title="Pending" data-placement="right" value="active">
 		<!-- <i class="la la-plus-circle"></i> -->Pending
 		</button>

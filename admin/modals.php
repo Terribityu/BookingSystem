@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     tinymce.init({
         selector: '#blogbody',
         resize: false,
@@ -17,7 +17,7 @@
             });
         },
     });
-</script>
+</script> -->
 
 <div class="modal fade" id="editDestinationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -138,7 +138,7 @@
 </div>
 
 
-<div class="modal fade" id="editBlogsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="editBlogsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -164,4 +164,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

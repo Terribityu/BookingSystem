@@ -128,8 +128,6 @@ include("./modal.php");
     <!--====== BLOG PART ENDS ======-->
    <!-- ======= Sweet Alert ========= -->
    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- ======== TinyMyce ========= -->
-  <script src="https://cdn.tiny.cloud/1/0zr1zh539s06toj7znrvwjimmsfs2j8s7g56z0sbly0d0a8u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
    <!--====== Jquery js ======-->
    <script src="./assets/js/jquery-1.12.4.min.js"></script>
