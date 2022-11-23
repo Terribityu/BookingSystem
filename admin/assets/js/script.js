@@ -1,5 +1,24 @@
 $(document).ready(function(){
 
+	load_statisctics();
+
+	function load_statisctics(){
+		$.ajax({
+			url:"database/statistics.php",
+			method:"post",
+			dataType:"json",
+			success:function(data)
+			{
+				console.log(data);
+				$('#destinationcount').html(data['destination']);
+				$('#clientcount').html(data['bookings']);
+				$('#incometotal').html(data['total']);
+				$('#ticketcount').html(data['ticket']);
+				$('#blogstotal').html(data['blogs']);
+			}
+		});
+	}
+
 	load_data();
 
 	function load_data(query)

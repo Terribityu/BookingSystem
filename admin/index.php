@@ -38,7 +38,7 @@ require ('database/connect.php');
                         <!-- small box -->
                         <div class="small-box bg-1">
                            <div class="inner">
-                              <h3>8</h3>
+                              <h3 id="destinationcount">8</h3>
                               <p>Destinations</p>
                            </div>
                            <div class="icon">
@@ -52,7 +52,7 @@ require ('database/connect.php');
                         <!-- small box -->
                         <div class="small-box bg-2">
                            <div class="inner">
-                              <h3>20</h3>
+                              <h3 id="clientcount">20</h3>
                               <p>Clients</p>
                            </div>
                            <div class="icon">
@@ -66,7 +66,7 @@ require ('database/connect.php');
                         <!-- small box -->
                         <div class="small-box bg-3">
                            <div class="inner">
-                              <h3>20,000</h3>
+                              <h3 id="incometotal">20,000</h3>
                               <p>Income</p>
                            </div>
                            <div class="icon">
@@ -75,6 +75,34 @@ require ('database/connect.php');
                            <a href="#" class="small-box-footer">More info <i class="las la-arrow-circle-right"></i></a>
                         </div>
                      </div>
+                     <div class="col-lg-4 col-6 animated bounceInLeft">
+                        <!-- small box -->
+                        <div class="small-box bg-4">
+                           <div class="inner">
+                              <h3 id="ticketcount">8</h3>
+                              <p>Tickets</p>
+                           </div>
+                           <div class="icon">
+                              <i class="la la-ticket-alt la-2x"></i>
+                           </div>
+                           <a href="tickets.php" class="small-box-footer">More info <i class="las la-arrow-circle-right"></i></a>
+                        </div>
+                     </div>
+                     <!-- ./col -->
+                     <div class="col-lg-4 col-6 animated rubberBand">
+                        <!-- small box -->
+                        <div class="small-box bg-5">
+                           <div class="inner">
+                              <h3 id="blogstotal">8</h3>
+                              <p>Blogs</p>
+                           </div>
+                           <div class="icon">
+                              <i class="la la-blog la-2x"></i>
+                           </div>
+                           <a href="blogs.php" class="small-box-footer">More info <i class="las la-arrow-circle-right"></i></a>
+                        </div>
+                     </div>
+                     <!-- ./col -->
                   </div>
 <!-- 
 		<div class="row">

@@ -454,13 +454,14 @@ try {
 
 if(isset($booknew)){
 
-    $query = "INSERT INTO bookings VALUES(null,'$fname','$lname','$email', '$nums', '$destid', now())";
-	mysqli_query($connection , $query);
+    
 
 	$query2 = "SELECT * FROM destination WHERE destID = '$destid'";
 	$result = mysqli_query($connection, $query2);
 	$row = mysqli_fetch_array($result);
 
+  $query = "INSERT INTO bookings VALUES(null,'$fname','$lname','$email', '$nums', '$price', '$destid', now())";
+	mysqli_query($connection , $query);
 
 	$inclu = $row['destInclu'];
   
@@ -685,7 +686,7 @@ try {
     <table style="line-height: 28px; font-size: 14px;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
     <tr>
     <td style="font-weight: 600; padding-top: 32px; color: #000000; font-size: 20px;" width="50%">Total</td>
-    <td style="font-weight: 600; padding-top: 32px; text-align: right; color: #68d391; font-size: 20px;" width="50%" align="right">₱'.$nums*$row['destPrice'].'</td>
+    <td style="font-weight: 600; padding-top: 32px; text-align: right; color: #68d391; font-size: 20px;" width="50%" align="right">₱'.$price.'</td>
     </tr>
     </table>
     </td>

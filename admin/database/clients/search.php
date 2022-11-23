@@ -9,6 +9,7 @@ if(isset($_POST["query"]))
 	or bookLname like '%$search%'
 	or bookEmail like '%$search%'
 	or bookCount like '%$search%'
+	or bookPrice like '%$search%'
 	or destID like '%$search%'
 	or bookDate like '%$search%'";
 	
@@ -26,6 +27,7 @@ while ($row = mysqli_fetch_array($result)) {
 						."<td>".$row['bookLname']."</td>"
 						."<td>".$row['bookEmail']."</td>"
 						."<td>".$row['bookCount']."</td>"
+						."<td>".$row['bookPrice']."</td>"
 						."<td>".$row['destID']."</td>"
 						."<td>".$row['bookDate']."</td>"
 						."<td>"

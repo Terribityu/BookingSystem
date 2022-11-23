@@ -43,6 +43,7 @@ require ('database/connect.php');
 				<th>Last Name</th>
 				<th>Email</th>
 				<th>Quantity</th>
+				<th>Price</th>
 				<th>Destination</th>
 				<th>Date</th>
 				<th>Action</th>
