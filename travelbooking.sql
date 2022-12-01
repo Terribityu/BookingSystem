@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2022 at 03:50 AM
+-- Generation Time: Dec 01, 2022 at 08:25 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -91,8 +91,8 @@ CREATE TABLE `destination` (
 
 CREATE TABLE `sales` (
   `saleID` int(55) NOT NULL,
-  `bookings` int(55) NOT NULL,
-  `destID` int(55) NOT NULL
+  `transDate` datetime(5) NOT NULL,
+  `bookID` int(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
