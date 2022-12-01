@@ -9,14 +9,14 @@ require ('database/connect.php');
 
     	
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-		<span class="h1"> <a href="index.php"> <i class="la la-map"></i> </a> Destinations &nbsp</span>
-        <button id="add" type="button" class="btn btn-success" data-toggle="modal" data-target="#editDestinationModal" title="Add Destination" data-placement="right">
+		<span class="h1"> <a href="index.php"> <i class="la la-money-bill"></i> </a> Sales &nbsp</span>
+        <!-- <button id="add" type="button" class="btn btn-success" data-toggle="modal" data-target="#editDestinationModal" title="Add Destination" data-placement="right">
 		<i class="la la-plus-circle"></i>
-		</button>
+		</button> -->
 
 		<form class="form-inline col-md-4 offset-md-3" >
 			<i class="la la-search" style="font-size: 25px"></i>
-			<input type="text" class="form-control form-control-sm ml-3 w-75" name="search_text" id="search_text" placeholder="Search..." >
+			<input type="text" class="form-control form-control-sm ml-3 w-75" name="search_sales" id="search_sales" placeholder="Search..." >
 		</form>
 
 		<ul class="navbar-nav ml-auto">
@@ -34,17 +34,17 @@ require ('database/connect.php');
       </nav>
       <div class="container-fluid table-responsive">
 
-<div id="viewRecords">
+<div id="viewSales">
 	<table id="mytable" class="table table-hover">
 		<thead class="thead-dark">
 			<tr>
-				<th>Image</th>
 				<th>ID</th>
-				<th>Name</th>
-				<th>Inclusion</th>
-				<th>Description</th>
+				<th>Destination</th>
+				<th>Client Name</th>
+				<th>Email</th>
+				<th>Quantity</th>
 				<th>Price</th>
-				<th>Trailer</th>
+				<th>Transaction Date</th>
 				<th>Action</th>
 			</tr>
 		</thead>
@@ -53,7 +53,11 @@ require ('database/connect.php');
 	</table>
 </div>
 </div>
-<!-- </div> -->
-<?php
-require ('template/footer.php');
-?>
+</div>
+
+<script src="./assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./assets/js/sales.js"></script>
+<script type="text/javascript" src="./assets/js/paging.js"></script> 
+
+</body>
+</html>

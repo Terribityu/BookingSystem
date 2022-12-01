@@ -9,7 +9,7 @@ require ('database/connect.php');
 
     	
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-		<span class="h1"> <i class="las la-table"></i> Dashboard &nbsp</span>
+		<span class="h1"> <a href="index.php"><i class="las la-table"></i> </a>Dashboard &nbsp</span>
         <!-- <button id="add" type="button" class="btn btn-success" data-toggle="modal" data-target="#editDestinationModal" data-tooltip="tooltip" title="Add Student" data-placement="right">
 		<i class="la la-plus-circle"></i>
 		</button> -->

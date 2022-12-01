@@ -236,10 +236,10 @@ include("./modal.php");
                             <img src="./assets/img/team-1.jpg" alt="Team">
                             <div class="social">
                                 <ul>
-                                    <li><a target="_blank" href="https://web.facebook.com/mizzenggg"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a target="_blank" href="https://twitter.com/mizzengg"><i class="lni-twitter-filled"></i></a></li>
-                                    <li><a target="_blank" href="https://www.instagram.com/mizzyssippi/"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a target="_blank" href="https://github.com/Mizzeyy"><i class="lni-github-original"></i></a></li>
+                                    <li><a target="_blank" href="https://web.facebook.com/mizzenggg"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/mizzengg"><i class="lni lni-twitter-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/mizzyssippi/"><i class="lni lni-instagram-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://github.com/Mizzeyy"><i class="lni lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -255,10 +255,10 @@ include("./modal.php");
                             <img src="./assets/img/team-2.jpg" alt="Team">
                             <div class="social">
                                 <ul>
-                                    <li><a target="_blank" href="https://facebook.com/fascinatingact"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a target="_blank" href="https://twitter.com/fascinatinggg_"><i class="lni-twitter-filled"></i></a></li>
-                                    <li><a target="_blank" href="https://www.instagram.com/terribityu/"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a target="_blank" href="https://github.com/terribityu"><i class="lni-github-original"></i></a></li>
+                                    <li><a target="_blank" href="https://facebook.com/fascinatingact"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/fascinatinggg_"><i class="lni lni-twitter-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/terribityu/"><i class="lni lni-instagram-filled"></i></a></li>
+                                    <li><a target="_blank" href="https://github.com/terribityu"><i class="lni lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -274,10 +274,10 @@ include("./modal.php");
                             <img src="./assets/img/team-3.jpg" alt="Team">
                             <div class="social">
                                 <ul>
-                                    <li><a target="_blank" href="#"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a target="_blank" href="#"><i class="lni-twitter-filled"></i></a></li>
-                                    <li><a target="_blank" href="#"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a target="_blank" href="#"><i class="lni-github-original"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="lni lni-github-original"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -319,7 +319,7 @@ include("./modal.php");
                                 <li>03 June, 2023</li>
                             </ul>
                             <p class="text">Title</p>
-                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                            <a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single blog -->
                 </div> 
@@ -334,7 +334,7 @@ include("./modal.php");
                                 <li>03 June, 2023</li>
                             </ul>
                             <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                            <a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single blog -->
                 </div> 
@@ -349,7 +349,7 @@ include("./modal.php");
                                 <li>03 June, 2023</li>
                             </ul>
                             <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                            <a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single blog -->
                 </div> 
@@ -410,11 +410,11 @@ include("./modal.php");
             <div class="col-md-3">
               <h3>Follow us</h3>
               <ul class="list-unstyled social">
-                <li><a href="#"><span class="lni-facebook-filled"></span></a></li>
-                <li><a href="#"><span class="lni-twitter-filled"></span></a></li>
-                <li><a href="#"><span class="lni-linkedin-filled"></span></a></li>
-                <li><a href="#"><span class="lni-medium"></span></a></li>
-                <li><a href="#destinations"><span class="lni-plane"></span></a></li>
+                <li><a href="#"><span class="lni lni-facebook-filled"></span></a></li>
+                <li><a href="#"><span class="lni lni-twitter-filled"></span></a></li>
+                <li><a href="#"><span class="lni lni-linkedin-original"></span></a></li>
+                <li><a href="#"><span class="lni lni-medium"></span></a></li>
+                <li><a href="#destinations"><span class="lni lni-plane"></span></a></li>
               </ul>
             </div>
             

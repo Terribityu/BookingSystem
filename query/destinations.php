@@ -28,7 +28,7 @@ $count = 0;
 								<div class="services-icon">
 									<img class="shape" src="./assets/destinations/'.$row['destImg'].'" alt="Destination Img">
 									<!-- <img class="shape-1" src="./assets/img/" alt="Destination Img"> -->
-									<!-- <i class="lni-baloon"></i> -->
+									<!-- <i class="lni lni-baloon"></i> -->
 								</div>
 								<div class="services-content mt-30">
 									<h4 class="services-title"><a href="#destinations">'.$row['destName'].'</a></h4>
@@ -44,7 +44,7 @@ $count = 0;
 								<div class="services-icon">
 									<img class="shape" src="./assets/destinations/'.$row['destImg'].'" alt="Destination Img">
 									<!-- <img class="shape-1" src="./assets/img/" alt="Destination Img"> -->
-									<!-- <i class="lni-baloon"></i> -->
+									<!-- <i class="lni lni-baloon"></i> -->
 								</div>
 								<div class="services-content mt-30">
 									<h4 class="services-title"><a href="#">'.$row['destName'].'</a></h4>

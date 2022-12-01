@@ -35,5 +35,6 @@
       <a href="blogs.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-blog"></i> Blogs </a>
       <a href="clients.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-user"></i> Clients </a>
       <a href="tickets.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-ticket-alt"></i> Tickets </a>
+      <a href="sales.php" class="list-group-item list-group-item-action bg-light"> <i class="las la-money-bill"></i> Sales </a>
       </div>
     </div>

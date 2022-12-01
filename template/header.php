@@ -17,7 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/carousel.css">
     <!--====== Line Icons CSS ======-->
-    <link href=".\assets\css\lineicons.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
     <!-- ======== TinyMyce ========= -->
   <!-- <script src="https://cdn.tiny.cloud/1/0zr1zh539s06toj7znrvwjimmsfs2j8s7g56z0sbly0d0a8u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
     <!--====== Style CSS ======-->

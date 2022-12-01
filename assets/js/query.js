@@ -213,8 +213,10 @@ $("#otp").keyup(function(){
     {
       if(data == true){
         $("#otp").removeClass("errorClass");
+        $("#email").attr("readonly","");
         return true;
       }else{
+        $("#email").removeAttr("readonly");
         return false;
       }
     }
@@ -276,6 +278,7 @@ $('#bookModal').on("hidden.bs.modal",function(){
       timeLeft = 60;
       $('#sendotp').html('Send OTP verication Code.');
       $('#sendotp').attr('href',"");
+      $("#email").removeAttr("readonly");
       $('#sendotp').addClass('sendotp');
       console.log(data);
     }

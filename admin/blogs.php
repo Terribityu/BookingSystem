@@ -9,7 +9,7 @@ require ('database/connect.php');
 
     	
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-		<span class="h1"> <i class="la la-map"></i> Blogs &nbsp</span>
+		<span class="h1"> <a href="index.php"> <i class="la la-blog"></i> </a> Blogs &nbsp</span>
         <!-- <button id="addblogs" type="button" class="btn btn-success" data-toggle="modal" data-target="#editBlogsModal" data-tooltip="tooltip" title="Create Blog" data-placement="right">
 		<i class="la la-plus-circle"></i>
 		</button> -->
