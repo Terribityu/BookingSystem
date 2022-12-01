@@ -22,7 +22,7 @@
 </p> -->
 | URL | Repository| Description  |
 |---  |---        |----          |
-|[Link](https://readysetgala.000webhostapp.com/)|[Ready, Set, GALA! 2022](https://github.com/Terribityu/BookingSystem.git)|  A Travel Booking site to view latest and popular destinations.truncate table
+|[Link](https://readysetgala.000webhostapp.com/)|[Ready, Set, GALA! 2022](https://github.com/Terribityu/BookingSystem.git)|  A Travel Booking site to view latest and popular destinations.
 
 ## Features
 
