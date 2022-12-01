@@ -22,8 +22,7 @@
 </p> -->
 | URL | Repository| Description  |
 |---  |---        |----          |
-|[Link](https://movieflix2021.000webhostapp.com/)|[MovieFlix 2021](https://github.com/Terribityu/BookingSystem.git)|  A movie site to view latest and popular movies.
-
+|[Link](https://readysetgala.000webhostapp.com/)|[Ready, Set, GALA! 2022](https://github.com/Terribityu/BookingSystem.git)|  A Travel Booking site to view latest and popular destinations.truncate table
 
 ## Features
 
