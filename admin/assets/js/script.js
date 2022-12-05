@@ -204,7 +204,14 @@ $(document).ready(function(){
 		
 	});
 	
+	$(document).on('click','#logout', function(e){
+		e.preventDefault();
+		alertify.confirm('<i class="las la-exclamation-triangle"></i> Logout','Are you sure you want to logout?', function(){ 
+			window.location.href = "database/logout.php";
+		}
+		, function(){}).set({transition:'zoom'}).show(); ;
 
+	})
 	$("#image").change(function() {
 		const [file] = this.files;
         // var file = this.files[0];

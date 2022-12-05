@@ -25,7 +25,7 @@ require ('database/connect.php');
                   </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="database/logout.php">
+                  <a class="nav-link" id="logout" href="database/logout.php">
                   <i class="las la-power-off"></i>
                   </a>
                </li>
