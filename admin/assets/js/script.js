@@ -51,34 +51,45 @@ $(document).ready(function(){
 	$('[data-tooltip="tooltip"]').tooltip();
 
 	$("#editDestinationModal").on("hidden.bs.modal", function () {
-     $("#user-availability-status").html("");
-      $("#insert").removeAttr('disabled','');
-	  $("#inclusions1").removeAttr('disabled','');
-	  $("#inclusions2").removeAttr('disabled','');
-	  $("#inclusions3").removeAttr('disabled','');
-	  $("#inclusions4").removeAttr('disabled','');
-	  $("#inclusions5").removeAttr('disabled','');
-	  $("#inclusions6").removeAttr('disabled','');
-	  $("#inclusions7").removeAttr('disabled','');
-	  $("#inclusions8").removeAttr('disabled','');
-      $("#id").removeClass("is-valid")
-      $("#id").removeClass("is-invalid");
-	  $('#editForm')[0].reset();  
+		$("#user-availability-status").html("");
+		 $("#insert").removeAttr('disabled','');
+		 $("#inclusions11").removeAttr('disabled','');
+		 $("#inclusions22").removeAttr('disabled','');
+		 $("#inclusions33").removeAttr('disabled','');
+		 $("#inclusions44").removeAttr('disabled','');
+		 $("#inclusions55").removeAttr('disabled','');
+		 $("#inclusions66").removeAttr('disabled','');
+		 $("#inclusions77").removeAttr('disabled','');
+		 $("#inclusions88").removeAttr('disabled','');
+		 $("#inclusions99").removeAttr('disabled','');
+		 $("#id").removeClass("is-valid")
+		 $("#id").removeClass("is-invalid");
+		 $('#editForm')[0].reset();  
+   });
+
+   $("#addDestinationModal").on("hidden.bs.modal", function () {
+	$("#user-availability-status").html("");
+	 $("#insert").removeAttr('disabled','');
+	 $("#inclusions1").removeAttr('disabled','');
+	 $("#inclusions2").removeAttr('disabled','');
+	 $("#inclusions3").removeAttr('disabled','');
+	 $("#inclusions4").removeAttr('disabled','');
+	 $("#inclusions5").removeAttr('disabled','');
+	 $("#inclusions6").removeAttr('disabled','');
+	 $("#inclusions7").removeAttr('disabled','');
+	 $("#inclusions8").removeAttr('disabled','');
+	 $("#inclusions9").removeAttr('disabled','');
+	 $("#id").removeClass("is-valid")
+	 $("#id").removeClass("is-invalid");  
+	 $("#preview2").attr("src","./assets/img/upimg.png");
+	 $("#preview2").css({ 'height': '', 'width': '' }); 
+	 $('#addForm')[0].reset();  
 });
 
-	$('#add').click(function(){  
-           $('#insert').val("Insert");  
-           $('#exampleModalCenterTitle').html("<i id='icon' class='las la-plus-circle'></i> Add Destination");
-		   $('#editForm').trigger("reset");
-           $('#editForm')[0].reset();  
-		   $("#preview").attr("src","./assets/img/upimg.png");
-		   $("#preview").css({ 'height': '', 'width': '' }); 
-
-      });
-
-		$('#editForm').on("submit", function(e){
+		$('#addForm').on("submit", function(e){
 			e.preventDefault();
 			var data = $(this).serialize();
+			$('#addDestinationModal').modal('hide'); 
 		$.ajax({
 			type: 'POST',
 			url: 'database/destination/addRecord.php',
@@ -88,7 +99,6 @@ $(document).ready(function(){
             processData:false,
 			success: function (data) {
 				console.log(data);
-                $('#editDestinationModal').modal('hide'); 
 				load_data();
 			},
 			error: function(xhr , status , error) {
@@ -102,35 +112,41 @@ $(document).ready(function(){
 		console.log(inclu);
 		console.log($('#inclusions1').val());
 		if(inclu[0] == "O1"){
-			$('#inclusions1').prop('checked',true);
-			$('#inclusions2').attr("disabled", true);
+			$('#inclusions11').prop('checked',true);
+			$('#inclusions22').attr("disabled", true);
 		}else if(inclu[0] == "O2"){
-			$('#inclusions2').prop('checked',true);
-			$('#inclusions1').attr("disabled", true);
+			$('#inclusions22').prop('checked',true);
+			$('#inclusions11').attr("disabled", true);
 		}
 		
 		if(inclu[1] == "O3"){
-			$('#inclusions3').prop('checked',true);
-			$('#inclusions4').attr("disabled", true);
+			$('#inclusions33').prop('checked',true);
+			$('#inclusions44').attr("disabled", true);
+			$('#inclusions99').attr("disabled", true);
 		}else if(inclu[1] == "O4"){
-			$('#inclusions4').prop('checked',true);
-			$('#inclusions3').attr("disabled", true);
+			$('#inclusions44').prop('checked',true);
+			$('#inclusions33').attr("disabled", true);
+			$('#inclusions99').attr("disabled", true);
+		}else if(inclu[1] == "O9"){
+			$('#inclusions99').prop('checked',true);
+			$('#inclusions33').attr("disabled", true);
+			$('#inclusions44').attr("disabled", true);
 		}
 	
 		if(inclu[2] == "O5"){
-			$('#inclusions5').prop('checked',true);
-			$('#inclusions6').attr("disabled", true);
+			$('#inclusions55').prop('checked',true);
+			$('#inclusions66').attr("disabled", true);
 		}else if(inclu[2] == "O6"){
-			$('#inclusions6').prop('checked',true);
-			$('#inclusions5').attr("disabled", true);
+			$('#inclusions66').prop('checked',true);
+			$('#inclusions55').attr("disabled", true);
 		}
 		
 		if(inclu[3] == "O7"){
-			$('#inclusions7').prop('checked',true);
-			$('#inclusions8').attr("disabled", true);
+			$('#inclusions77').prop('checked',true);
+			$('#inclusions88').attr("disabled", true);
 		}else if(inclu[3] == "O8"){
-			$('#inclusions8').prop('checked',true);
-			$('#inclusions7').attr("disabled", true);
+			$('#inclusions88').prop('checked',true);
+			$('#inclusions77').attr("disabled", true);
 		}
 	}
 
@@ -152,7 +168,6 @@ $(document).ready(function(){
 				$("#editForm [name='trailer']").val(data["destTrailer"]);
 				$("#preview").css({ 'height': '250px', 'width': '400' }); 
 				$("#preview").attr("src","../assets/destinations/"+data["destImg"]);
-				$('#insert').val("Update"); 
 				$('#exampleModalCenterTitle').html("<h5><i id='icon' class='las la-user-edit'></i> Edit Destination</h5>");
 				$('#editDestinationModal').modal('show');
 			},
@@ -162,10 +177,33 @@ $(document).ready(function(){
 		});
 
 	});
+	
+	$(document).on('click','#inclusions33', function(){
+		console.log($('#inclusions33').is(':checked'));
+		if($('#inclusions33').is(':checked') == 0 && $('#inclusions44').is(':checked') == 0 && $('#inclusions99').is(':checked') == 0){
+			console.log("True");
+		}
+	})
+	function checkInclu(){
+		if($('#inclusions11').is(':checked') == false && $('#inclusions22').is(':checked') == false){
+			$('#inclu01').prop('checked', true);
+		}
+		if($('#inclusions33').is(':checked') == false && $('#inclusions44').is(':checked') == false && $('#inclusions99').is(':checked') == false){
+			$('#inclu02').prop('checked', true);
+		}
+		if($('#inclusions55').is(':checked') == false && $('#inclusions66').is(':checked') == false){
+			$('#inclu03').prop('checked', true);
+		}
+		if($('#inclusions77').is(':checked') == false && $('#inclusions88').is(':checked') == false){
+			$('#inclu04').prop('checked', true);
+		}
+	}
 
 		$('#editForm').on("submit", function(e){
 			e.preventDefault();
+			checkInclu();
 			var data = $(this).serialize();
+			$('#editDestinationModal').modal('hide'); 
 		$.ajax({
 			type: 'POST',
 			url: 'database/destination/updateRecord.php',
@@ -174,7 +212,7 @@ $(document).ready(function(){
 			cache: false,
 			processData:false,
 			success: function () {
-				$('#editDestinationModal').modal('hide'); 
+				
 				load_data();
 				// window.location.href = "./destinations.php";
 			},
@@ -225,6 +263,22 @@ $(document).ready(function(){
 		if (file) {
 			$("#preview").css({ 'height': '250px', 'width': '400' }); 
 			preview.src = URL.createObjectURL(file);
+		}
+    });
+
+	$("#image2").change(function() {
+		const [file] = this.files;
+        // var file = this.files[0];
+        var fileType = file.type;
+        var match = ['image/jpeg', 'image/png', 'image/jpg'];
+        if(!((fileType == match[0]) || (fileType == match[1]) || (fileType == match[2]))){
+            alert('Sorry, JPG, JPEG, & PNG files are allowed to upload.');
+            $("#image2").val('');
+            return false;
+        }
+		if (file) {
+			$("#preview2").css({ 'height': '250px', 'width': '400' }); 
+			preview2.src = URL.createObjectURL(file);
 		}
     });
 	

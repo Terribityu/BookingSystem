@@ -15,19 +15,8 @@
                             <p> Inclusions: </p>
                       </div>
                       <div class="col-lg-6 ml-4">
-                        <ul>
-                        <li>
-                            <span id="destInclu"> Kalapati </span>
-                          </li>
-                          <li>
-                            <span id="destInclu1"> Kalapati </span>
-                          </li>
-                          <li>
-                            <span id="destInclu2"> Kalapati </span>
-                          </li>
-                          <li>
-                            <span id="destInclu3"> Kalapati </span>
-                          </li>
+                        <ul id="allinclu">
+                        
                         </ul>
                       </div>
                       <div class="col-lg-4">

@@ -20,9 +20,9 @@
 <p align="center">
   <img src="screenshots/deleteData1.png" width=40% height=40%> <img src="screenshots/deleteData2.png" width=40% height=40%>
 </p> -->
-<!-- | URL | Repository| Description  |
+| URL | Repository| Description  |
 |---  |---        |----          |
-|[Link](https://readysetgala.000webhostapp.com/)|[Ready, Set, GALA! 2022](https://github.com/Terribityu/BookingSystem.git)|  A Travel Booking site to view latest and popular destinations. -->
+|[Link](https://readysetgalaph.000webhostapp.com/)|[Ready, Set, GALA! 2022](https://github.com/Terribityu/BookingSystem.git)|  A Travel Booking site to view latest and popular destinations.
 
 ## Features
 

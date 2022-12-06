@@ -10,7 +10,7 @@ require ('database/connect.php');
     	
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 		<span class="h1"> <a href="index.php"> <i class="la la-map"></i> </a> Destinations &nbsp</span>
-        <button id="add" type="button" class="btn btn-success" data-toggle="modal" data-target="#editDestinationModal" title="Add Destination" data-placement="right">
+        <button id="add" type="button" class="btn btn-success" data-toggle="modal" data-target="#addDestinationModal" title="Add Destination" data-placement="right">
 		<i class="la la-plus-circle"></i>
 		</button>
 

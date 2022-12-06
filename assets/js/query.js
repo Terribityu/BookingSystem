@@ -168,27 +168,29 @@ function getInclusions(inclu){
   console.log(inclu);
   // console.log($('#inclusions1').val());
   if(inclu[0] == "O1"){
-    $("#destInclu").html("Roundtrip Airfare via Philippines Airline");
+    $("#allinclu").html("<li><span id='destInclu'>Roundtrip Airfare via Philippines Airline</span></li>");
   }else if(inclu[0] == "O2"){
-    $("#destInclu").html("One-way Trip Airfare via Philippines Airline");
+    $("#allinclu").html("<li><span id='destInclu'>One-way Trip Airfare via Philippines Airline</span></li>");
   }
   
   if(inclu[1] == "O3"){
-    $("#destInclu1").html("1 night accomodation");
+    $("#allinclu").append("<li><span id='destInclu'>2 days 1 night accomodation</span></li>");
   }else if(inclu[1] == "O4"){
-    $("#destInclu1").html("2 nights accomodation");
+    $("#allinclu").append("<li><span id='destInclu'>3 days 2 nights accomodation</span></li>");
+  }else if(inclu[1] == "O9"){
+    $("#allinclu").append("<li><span id='destInclu'>4 days 3 nights accomodation</span></li>");
   }
 
   if(inclu[2] == "O5"){
-    $("#destInclu2").html("Daily Breakfast, Dinner");
+    $("#allinclu").append("<li><span id='destInclu'>Daily Breakfast, Dinner</span></li>");
   }else if(inclu[2] == "O6"){
-    $("#destInclu2").html("Daily Breakfast,Lunch,Dinner");
+    $("#allinclu").append("<li><span id='destInclu'>Daily Breakfast,Lunch,Dinner</span></li>");
   }
   
   if(inclu[3] == "O7"){
-    $("#destInclu3").html("Tour guide and transportation");
+    $("#allinclu").append("<li><span id='destInclu'>Tour guide and transportation</span></li>");
   }else if(inclu[3] == "O8"){
-    $("#destInclu3").html("First day hotel pickup and guide");
+    $("#allinclu").append("<li><span id='destInclu'>First day hotel pickup and guide</span></li>");
   }
 }
 

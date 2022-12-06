@@ -8,6 +8,7 @@ require ('../connect.php');
 	$price = $_POST['price'];
 	$trailer = $_POST['trailer'];
 	
+	echo $inclu;
 	$uploadDir = '../../../assets/destinations/'; 
 	$uploadedFile = ''; 
 	$fileName = basename($_FILES["image"]["name"]); 

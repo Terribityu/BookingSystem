@@ -469,6 +469,10 @@ if($email == $_POST['email']){
 
     $inclu = $row['destInclu'];
     
+    $transport = "Not Available";
+    $accomodation = "Not Available";
+    $food = "Not Available";
+    $tour = "Not Available";
       if($inclu[2].$inclu[3] == "O1"){
       $transport = "Roundtrip Airfare via Philippines Airline";
       }else if($inclu[2].$inclu[3] == "O2"){
@@ -476,9 +480,11 @@ if($email == $_POST['email']){
       }
       
       if($inclu[7].$inclu[8] == "O3"){
-      $accomodation = "1 night accomodation";
+      $accomodation = "2 days 1 night accomodation";
       }else if($inclu[7].$inclu[8] == "O4"){
-      $accomodation = "2 nights accomodation";
+      $accomodation = "3 days 2 nights accomodation";
+      }else if($inclu[7].$inclu[8] == "O9"){
+      $accomodation = "4 days 3 nights accomodation";
       }
     
       if($inclu[12].$inclu[13] == "O5"){
